@@ -1,15 +1,13 @@
-Syncthing server docker image
-=============================
+* Pulse server docker image
 
-A simple image for a Syncthing server. https://github.com/calmh/syncthing
+A simple image for a Pulse server. https://ind.ie/pulse/
 
-Usage
-=====
+* Usage
 
-Assuming you want to mount Syncthing' working directories on the host (not very
+Assuming you want to mount Pulse' working directories on the host (not very
 useful if you don't):
 
-```shellsession
+#+BEGIN_SRC bash
 export VOLUMES=/srv/docker/volumes/syncthing
 sudo mkdir -p $VOLUMES/{config,data}
 docker run -d --name syncthing \
@@ -17,6 +15,6 @@ docker run -d --name syncthing \
            -v $VOLUMES/config:/home/syncthing/.config/syncthing \
            -v $VOLUMES/data:/home/syncthing/Sync \
            ncadou/syncthing
-```
+#+END_SRC
 
 The web interface will be accessible at http://127.0.0.1:8080
